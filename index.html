@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4_D7</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="container-fluid shadow-sm py-3 myNavbar position-fixed top-0">
+        <div class="container d-flex justify-content-between">
+            <a class="btn btn-outline-success" id="addProductButton"><i class="fa-solid fa-plus me-2"></i>add
+                product</a>
+            <img src="asset/settings.png" alt="logo" height="40px">
+        </div>
+    </div>
+    <!-- add products form modal-->
+    <div class="container mb-1 mt-5 pt-5 d-none" id="addProductModal">
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">name</label>
+                <input type="text" class="form-control" id="nameInput" aria-describedby="name">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">description</label>
+                <input type="text" class="form-control" id="descriptionInput">
+            </div>
+            <div class="mb-3">
+                <label for="brand" class="form-label">brand</label>
+                <input type="text" class="form-control" id="brandInput">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">price</label>
+                <input type="text" class="form-control" id="priceInput">
+            </div>
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">imageUrl</label>
+                <input type="text" class="form-control" id="imageUrlInput">
+            </div>
+            <img id="previewImg" src="https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=" alt="img">
+            <div class="mt-3">
+                <a class="btn btn-outline-primary" id="post_btn"><i class="fa-solid fa-paper-plane me-2"></i></i>create</a>
+            </div>
+        </form>
+        <div class="alert alert-warning d-flex align-items-center mt-2 d-none" role="alert" id="alert-field">
+            <i class="fa-solid fa-triangle-exclamation me-3"></i>
+            <div>Fill all the text field!</div>
+        </div>
+        <hr>
+    </div>
+    <!-- main showroom -->
+    <div class="container myShowroom pt-5 my-5">
+        <div class="row d-flex justify-content-center" id="productRowBox" style="z-index: 9;">
+        </div>
+    </div>
+    <!-- edit form modal -->
+    <div class="container-fluid position-fixed d-flex d-none justify-content-center mt-5 top-0 w-100" id="edit-modal">
+
+        <form class="bg-light p-5 rounded-2 border border-light shadow my-5 w-75">
+            <div class="position-absolute" id="close-editBtn"><i class="fa-solid fa-x"></i></div>
+            <div class="mb-3">
+                <label for="name" class="form-label">name</label>
+                <input type="text" class="form-control" id="nameInputEdit" aria-describedby="name">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">description</label>
+                <input type="text" class="form-control" id="descriptionInputEdit">
+            </div>
+            <div class="mb-3">
+                <label for="brand" class="form-label">brand</label>
+                <input type="text" class="form-control" id="brandInputEdit">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">price</label>
+                <input type="text" class="form-control" id="priceInputEdit">
+            </div>
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">imageUrl</label>
+                <input type="text" class="form-control" id="imageUrlInputEdit">
+            </div>
+            <a class="btn btn-info" id="update_btn">update</a>
+            <a class="btn btn-danger" id="delete_btn">remove</a>
+        </form>
+    </div>
+
+
+
+
+    <script src="https://kit.fontawesome.com/0e9751cf5d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

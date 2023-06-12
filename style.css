@@ -1,0 +1,18 @@
+
+.productCard{
+    max-width: 18rem !important;
+}
+.myNavbar{
+    background-color: rgb(255, 255, 255);
+    z-index: 9;
+}
+.imgBox{
+    height: 300px;
+    overflow: hidden;
+}
+#close-editBtn{
+    top: 65px;
+}
+#previewImg{
+    width: 350px;
+}
